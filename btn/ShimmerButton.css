@@ -1,0 +1,26 @@
+.shimmer-effect {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+  
+  .shimmer-btn:hover .shimmer-effect {
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .shimmer-effect {
+    animation: shimmer 3s infinite;
+  }
+  

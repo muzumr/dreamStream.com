@@ -1,0 +1,82 @@
+body{
+    font-family: 'Georgia', serif;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./landing.jpg') no-repeat center center / cover;
+    z-index: 0;
+  }
+  
+  .menu-bar.open {
+    transform: rotate(45deg);
+  }
+  
+  .horizontal-nav.active {
+    top: 2%;
+  }
+  .content p::after {
+    content: '';
+    display: block;
+    width: 18%;
+    height: 2px;
+    background: #6b7477;
+    margin: 10px auto 0;
+    position: absolute;
+    left: 2%;
+    bottom: 73%;
+
+}
+.footer span::after {
+    content: '';
+    display: block;
+    width: 7%;
+    height: 2px;
+    background: #6b7477;
+    margin: 10px auto 0;
+    position: absolute;
+    left: 5.9%;
+    bottom: 44%;
+
+}
+.footer a {
+    color: #6b7477;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.scroll-down {
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #6b7477;
+}
+.scroll-down:hover{
+  color: #fff;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .content p::after {
+      width: 7%; /* Increase width on mobile for better visibility */
+      left: 10%; /* Center horizontally */
+      bottom: 83%; /* Adjust position to match content layout */
+  }
+  .about-links{
+    color: #6b7477;
+    
+  }
+}

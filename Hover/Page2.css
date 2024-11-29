@@ -1,0 +1,136 @@
+/* Body styles to handle overflow */
+body {
+    overflow-y: hidden;
+  }
+  
+  .page2 {
+    height: 100vh;
+    width: 98.8vw;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .elem {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px; /* Ensures consistent spacing */
+    /* background: #000; */
+  }
+  
+  .elem .blur {
+    position: absolute;
+    width: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #111111ef, #f2f2f0, #000000ea);
+    height: 100%;
+    z-index: 8;
+    box-shadow: 10px 0px 20px 20px #5b5a5a, -7px 0px 20px 100px #4a4848;
+  }
+  
+  .elem:hover .moving {
+    transform: translate(0, -45%) scaleY(1);
+  }
+  
+  .elem:hover .moving .moving-in h5 {
+    opacity: 1;
+  }
+  
+  .elem:hover h2 {
+    font-family: "Noto Sans Old Italic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* color: #000; */
+  }
+  
+  
+  .elem h2 {
+    font-size: 5vw;
+    /* color: #000; */
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    font-style: normal;
+    z-index: 10;
+    line-height: 4vw;
+    margin-bottom: 15px; /* Ensures consistent spacing between elements */
+  }
+  
+  .elem .moving {
+    background: #d5d9d9;
+    width: 100%;
+    white-space: nowrap;
+    padding: 8px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -45%) scaleY(0);
+    transition: all 0.5s;
+    overflow: hidden;
+  }
+  
+  .elem .moving .moving-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .elem .moving .moving-in h5 {
+    color: #000;
+    display: inline-block;
+    opacity: 0;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: gilroy;
+    text-transform: uppercase;
+    transition-delay: 0.2s;
+    transition: all 0.5s;
+    margin-right: 35px;
+  }
+  
+  /* Keyframes for moving animation */
+  @keyframes moving {
+    from {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(-100%);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .elem h2 {
+      font-size: 9vw; /* Larger font size for mobile */
+      line-height: 7vw;
+    }
+    
+    .elem .blur {
+      width: 20%; /* Adjust blur width for smaller screens */
+    }
+  
+    .elem .moving {
+      padding: 6px 0; /* Adjust padding for smaller screens */
+    }
+  
+    .elem .moving .moving-in h5 {
+      font-size: 15px; /* Adjust font size for better readability on mobile */
+    }
+  
+    .elem {
+      margin-bottom: 30px; /* Increase bottom margin for better spacing on smaller screens */
+    }
+  }
+  

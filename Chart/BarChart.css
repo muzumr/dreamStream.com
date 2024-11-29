@@ -1,0 +1,119 @@
+#chartContainer {
+    width: 80%;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+/* #chartContainer #myChart:Hover{
+    background: white;
+} */
+
+#visitorCounts {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.count {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #chartContainer {
+        width: 95%;
+    }
+
+    #visitorCounts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .count {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .glow-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glow-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .count {
+        font-size: 18px;
+    }
+}
+
+.try {
+    height: 300vh;
+}
+
+.mobileCount {
+    display: none;
+}
+
+.glow-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3498db;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+/* Border Glow and Text Scaling on Hover */
+.glow-btn:hover {
+    color: #fff;
+    border-color: #fff;
+    font-size: 20px; /* Slightly larger text */
+    box-shadow: 0 0 15px rgba(9, 9, 9, 0.8), 0 0 25px rgba(255, 255, 255, 0.6); /* Glowing border */
+    background-color: #2980b9;
+}
+
+/* Optional: Add some subtle animation for button entrance */
+.glow-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(136, 46, 46, 0.2), rgba(255, 255, 255, 0));
+    transition: all 0.7s ease;
+    z-index: 0;
+}
+
+.glow-btn:hover::before {
+    top: 0;
+    left: 0;
+}
+
+/* To make sure the text remains on top */
+.glow-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.parent {
+    position: relative;
+    /* background: #ddd5c7; */
+    padding: 3% 3rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

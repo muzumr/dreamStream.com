@@ -1,0 +1,112 @@
+/* Mobile responsiveness for max width 768px */
+@media (max-width: 768px) {
+    .title {
+        font-size: 5em; /* Adjusted font size for h1 */
+        top: 50vh;
+        left: 50%;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    .HEADER{
+        /* background: #000; */
+        /* width: 70vw; */
+        font-size: 8em;
+    }
+    .frstHOne{
+        /* background: #f3eded; */
+        /* padding-left: 5vw; */
+        margin-left: 15vw;
+        width: 50vw;
+        text-align: right;
+    }
+    .frstPTag{
+        /* background: #f9f5f5; */
+width: 40vw;
+text-align: right;
+    }
+    .frstBtn{
+        /* background: #000; */
+        margin-top: 6vh;
+        margin-right: 22vw;
+    }
+    .frstBtn:hover{
+        background: white;
+        color: #000;
+        
+    }
+    .row {
+        padding: 1em; /* Add padding for mobile */
+        text-align: center; /* Center-align text */
+    }
+
+    .row h2 {
+        font-size: 1.5em; /* Smaller font for h2 */
+    }
+
+    .row p {
+        max-width: 90%; /* Reduce width */
+        font-size: 0.9em; /* Smaller font for p */
+    }
+
+    .row button {
+        font-size: 0.9em; /* Smaller font for buttons */
+        padding: 0.7em 1.2em;
+    }
+
+    .col {
+        position: static; 
+        width: 100vw; /* Full width on mobile */
+        margin-top: 2em; /* Spacing between columns */
+        text-align: right;
+        /* background: #000; */
+        margin-left: 20vw;
+    }
+    .colHtwo{
+        /* background: #fcfcfc; */
+       margin-left: 77vw;
+       text-align: center;
+    }
+    .colPTag{
+        /* background: #e4dcdc; */
+        width: 50vw;
+        text-align: left;
+        margin-left: 66vw;
+    }
+    .colBtn{
+        /* background: #000; */
+        margin-top: 6vh;
+        margin-right: 8vw;
+    }
+    .colBtn:hover{
+        background: #000;
+
+    }
+    .trdhTwo{
+        /* background: #bd181857; */
+        width: 100vw;
+        margin-left: 2vw;
+       text-align: center;
+       font-size: 10px;
+
+    }
+
+    /* Center elements that are positioned absolutely on smaller screens */
+    .title, .row, .row h2, button {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Adjust h2 and button for extra space on mobile */
+    h2 {
+        font-size: 1.8em;
+        margin-top: 1em;
+    }
+
+  
+}
+@media (max-width: 480px) {
+    .HEADER {
+      font-size: 5em;
+    }
+  }

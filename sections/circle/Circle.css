@@ -1,0 +1,31 @@
+
+  /* Responsive: Stack info boxes in a single column on small screens */
+  @media (max-width: 640px) {
+    .yellow-circle {
+      width: 50vh;
+      height: 50vh;
+         }
+  
+    .text-center-circle {
+      width: 35vh;
+      height: 35vh;
+      font-size: 1.5rem;
+      background-color: aqua;
+    }
+   
+  
+    .info-boxes-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-box {
+      width: 80vw;
+      height: auto;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+    }
+  }
+  
